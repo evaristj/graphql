@@ -15,7 +15,13 @@ let links = [{
     id: 'link-0',
     url: 'www.howtographql.com',
     description: 'FullStack tutorial for GraphQL'
-}]
+},
+{
+    id: 'link-1',
+    url: 'www.github.com',
+    description: 'Web genial para compartir código'
+}
+]
 
 const resolvers = {
     Query: {
@@ -30,7 +36,7 @@ const resolvers = {
 };
 
 const server = new GraphQLServer({
-    typeDefs,
     resolvers,
+    typeDefs,
 })
 server.start(() => console.log(`El servidor está levantado en http://localhost:4000`));
